@@ -17,3 +17,13 @@ MyTime = "4:35:47 PM" ' Define time.
 MyShortTime = CDate(MyTime) ' Convert to Date data type.
 
 ```
+
+# IIF関数（三項演算子っぽいもの)
+## 構文
+`IIF(条件, trueのとき, falseのとき)`
+
+## 例
+```vb
+Dim x As Long: x = 2
+Debug.Print IIF(x Mod 2 = 0, "偶数", "奇数")
+```
