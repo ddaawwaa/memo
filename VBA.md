@@ -1,5 +1,5 @@
 # 最終行を取得
-`Cells(Rows.Count, 列番号).End(xlUp)>Row`
+`Cells(Rows.Count, 列番号).End(xlUp).Row`
 
 # 日付の比較
 - 比較する値の両方とも、<u>日付型</u>にする
