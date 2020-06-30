@@ -38,3 +38,16 @@ Range(Cells(n,1), Cells(m,3))
 
 # セルの値をクリアする
 `Range("A1").Clear`
+
+# 全シートに対して処理をしたいとき
+- `For Each ~ Next`を使用する。
+- Workbooksコレクション、Worksheetsコレクション等でも使える
+
+例
+```vb
+Dim datasheet As Worksheet
+
+For Each datasheet In Worksheets
+  処理
+Next datasheet
+```
