@@ -27,3 +27,14 @@ MyShortTime = CDate(MyTime) ' Convert to Date data type.
 Dim x As Long: x = 2
 Debug.Print IIF(x Mod 2 = 0, "偶数", "奇数")
 ```
+
+# 変数を使って、範囲を指定する
+Rangeオブジェクト内でCellsを使用するときの書き方
+
+```vb
+Range(Cells(n,1), Cells(m,3))
+```
+※ n,m はinteger型の変数
+
+# セルの値をクリアする
+`Range("A1").Clear`
