@@ -51,3 +51,38 @@ For Each datasheet In Worksheets
   処理
 Next datasheet
 ```
+
+# ディレクトリ内の全ファイルを処理
+## サンプル
+sampleディレクトリ内の`.xlsx`ファイル名をイミディエイトウィンドウに表示する
+
+### コード
+```vb
+Sub Sample1()
+    Dim buf As String, cnt As Long
+    Const Path As String = "C:\Sample\"
+    '↓ポイント①
+    buf = Dir(Path & "*.xlsx")
+    'ポイント②
+    Do While buf <> ""
+        Debug.Print buf
+        '↓ポイント②
+        buf = Dir()
+    Loop
+End Sub
+```
+
+### 解説
+- ポイント①
+  - Dir関数の第１引数には、ディレクトリのパスを指定
+  - Dir関数の第２引数には、検索するファイルを指定する。
+    この例では、ワイルドカード（`*`）を使用して、`.xlsx`の全ファイルを取得
+
+- ポイント②
+  - マッチしたファイルが複数ある場合は、繰り返し処理で複数ファイルで同様の処理ができる。
+  - 次のマッチしたファイルを呼び出すときは、Dir関数を引数なしで呼び出す。(`buf = Dir()`の部分)
+  - マッチするファイルがない場合、Dir関数は長さ０の文字列(`""`)を返す。（`Do while buf <> ""`の部分）
+
+## 参考
+- [Dir 関数 \(Visual Basic for Applications\) \| Microsoft Docs](https://docs.microsoft.com/ja-jp/office/vba/language/reference/user-interface-help/dir-function)
+- [Office TANAKA \- ファイルの操作\[ファイルの一覧を取得する\]](http://officetanaka.net/excel/vba/file/file07.htm)
