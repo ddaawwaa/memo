@@ -1,5 +1,14 @@
 # 最終行を取得
-`Cells(Rows.Count, 列番号).End(xlUp).Row`
+
+```vb
+Cells(Rows.Count, 列番号).End(xlUp).Row
+```
+
+# 最終列を取得
+
+```vb
+Cells(行番号, Columns.Count).End(xlLeft).Column
+```
 
 # 日付の比較
 - 比較する値の両方とも、<u>日付型</u>にする
