@@ -86,3 +86,33 @@ End Sub
 ## 参考
 - [Dir 関数 \(Visual Basic for Applications\) \| Microsoft Docs](https://docs.microsoft.com/ja-jp/office/vba/language/reference/user-interface-help/dir-function)
 - [Office TANAKA \- ファイルの操作\[ファイルの一覧を取得する\]](http://officetanaka.net/excel/vba/file/file07.htm)
+
+
+# 変数の定義と代入を一行で
+## 例
+```vb
+dim name as string : name = "ddaawwaa"
+```
+この例に限らず、`:`を使えば、複数行を１行にまとめることができる
+
+# セルの文字を「折り返して全体を表示する」
+## 例
+A1セルの文字を「折り返して全体を表示する」
+
+```vb
+Range("A1").WrapText = true
+```
+## 参考
+[WrapText プロパティ \(Excel\) \| Microsoft Docs](https://docs.microsoft.com/ja-jp/office/vba/api/excel.range.wraptext)
+
+
+# 縦位置を中央揃えする
+## 例
+A1セルの文字の「縦位置を中央揃え」にする
+
+```vb
+Range("A1").VerticalAlignment = xlCenter
+```
+
+## 参考
+[指定範囲の一方向の配置プロパティ \(Excel\) \| Microsoft Docs](https://docs.microsoft.com/ja-jp/office/vba/api/excel.range.verticalalignment)
