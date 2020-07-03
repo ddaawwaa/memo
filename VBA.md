@@ -125,3 +125,21 @@ Range("A1").VerticalAlignment = xlCenter
 
 ## 参考
 [指定範囲の一方向の配置プロパティ \(Excel\) \| Microsoft Docs](https://docs.microsoft.com/ja-jp/office/vba/api/excel.range.verticalalignment)
+
+# 文字列の右から○文字を消す
+## 例
+文字列"sample.xlsx"から左５文字（.xlsx）を消す
+
+```vb
+Left("sample.xlsx", Len("sample.xlsx") - 5)
+```
+## 解説
+### Left
+`Left(文字列, 数字)`
+- 「文字列」の左から、「数字」分の文字列を抽出する
+
+### Len
+`Len(文字列)`
+- 「文字列」の文字数を表示する
+
+→ 右から○字消す = 左から(全文字数 - 消す数)分残す
