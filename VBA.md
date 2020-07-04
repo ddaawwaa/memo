@@ -143,3 +143,20 @@ Left("sample.xlsx", Len("sample.xlsx") - 5)
 - 「文字列」の文字数を表示する
 
 → 右から○字消す = 左から(全文字数 - 消す数)分残す
+
+# ユーザーフォーム
+
+## 文字数制限を設定
+`MaxLength`プロパティーを変更する
+最大４字だったら、「４」
+
+## 入力モードを事前に設定
+`IME Mode`プロパティーを変更する
+
+### 一覧(一部)
+|選択肢|概要|
+|:-:|:-:|
+|fmIMEModeDisable|IMEをOFF(手動変更不可)|
+|fmIMEModeOff|IMEをOFFにし、英語モードに|
+|fmIMEModeHiragana|全角ひらがな|
+|fmIMEModeAlpha|半角英数モードでIMEをオンにする|
