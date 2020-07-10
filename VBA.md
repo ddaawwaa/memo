@@ -146,6 +146,16 @@ Left("sample.xlsx", Len("sample.xlsx") - 5)
 
 # ユーザーフォーム
 
+## ボタンにユーザーフォームの出現マクロを登録
+`show`メソッドを使用する
+
+例）`botton1`をクリックすると、`UserForm1`を出現させる
+```vb
+sub botton1_click()
+  UserForm1.Show
+end sub
+```
+
 ## 文字数制限を設定
 `MaxLength`プロパティーを変更する
 最大４字だったら、「４」
@@ -160,3 +170,17 @@ Left("sample.xlsx", Len("sample.xlsx") - 5)
 |fmIMEModeOff|IMEをOFFにし、英語モードに|
 |fmIMEModeHiragana|全角ひらがな|
 |fmIMEModeAlpha|半角英数モードでIMEをオンにする|
+
+## tabキーを押したときの順番
+`TabIndex`プロパティの数値を変更
+
+## 表示されているタイトルの変更
+`Caption`プロパティの値を変更
+
+## ユーザーフォームの値を代入
+
+例）`UserForm1`の`txt_box1`の値を変数`input_num`に格納
+```vb
+dim input_num as integer
+input_num = UserForm1.txt_box1.Value
+```
