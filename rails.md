@@ -18,3 +18,18 @@ user = User.all
 user.plick(:id)
 # [1, 2, 3, 4]
 ```
+
+# renderでcontrollerからjsonを返す
+viewファイルではなく、jsonをコントローラーから返したい場合
+
+```ruby
+class UsersController < ApplicationController
+  def index
+    @users = User.all
+    render json: @users
+  end
+end
+```
+`render`メソッドに`:json`を記載する
+
+参考 [render \| Railsドキュメント](https://railsdoc.com/page/render)
