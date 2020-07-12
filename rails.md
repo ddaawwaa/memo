@@ -33,3 +33,30 @@ end
 `render`メソッドに`:json`を記載する
 
 参考 [render \| Railsドキュメント](https://railsdoc.com/page/render)
+
+# config/application.rb
+## generatorでviewファイルを生成しない
+```rb
+module HelloWorldRails
+  class Application < Rails::Application
+    # Initialize configuration defaults for originally generated Rails version.
+    config.load_defaults 5.2
+
+    config.generators do |g|
+      # ↓viewfileを生成しない
+      g.template_engine false
+      g.javascripts false
+      g.stylesheets false
+      g.helper false
+      g.test_framework false
+    end
+    ↓apiモードで必要なものを生成する
+    config.api_only = true
+
+    # Settings in config/environments/* take precedence over those specified here.
+    # Application configuration can go into files in config/initializers
+    # -- all .rb files in that directory are automatically loaded after loading
+    # the framework and any gems in your application.
+  end
+end
+```
