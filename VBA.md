@@ -184,3 +184,17 @@ end sub
 dim input_num as integer
 input_num = UserForm1.txt_box1.Value
 ```
+# ループを逆から回す(for~nextステートメントを使用)
+例）イミディエイトウィンドウに100から１を順番に表示
+
+```vb
+dim i as integer
+for i = 100 To 1 Step -1
+  Debug Print i
+next i
+```
+- `Step 数値`は次のループ時のカウンタ変数の増減を表す
+  - `Step -3`だったら、１周目：i=100→２周目：i=97→３周目：i=94
+
+# 条件分岐：○○でなければ（否定）
+例）
