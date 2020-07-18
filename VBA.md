@@ -212,3 +212,18 @@ End if
 イミディエイトウィンドウで
 `? Range("A1").column`と入力
 =>`1`が返ってくる
+
+# 今日の年or月or日を取得
+
+```vb
+'年
+Year(Date)
+
+'月
+Month(Date)
+
+'日
+Day(Date)
+```
+- `Date`は本日の年月日
+- 各関数で抽出
