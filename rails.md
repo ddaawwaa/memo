@@ -36,6 +36,7 @@ end
 
 # config/application.rb
 ## generatorでviewファイルを生成しない
+
 ```rb
 module HelloWorldRails
   class Application < Rails::Application
