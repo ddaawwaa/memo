@@ -233,5 +233,17 @@ Day(Date)
 ```vb
   Row(1).Delete
 ```
-※ 行ごと消すと、「削除後、上に詰める」しか考えられない  
+※ 行ごと消すと、「削除後、上に詰める」しか考えられない
 → オプションは付けなくで問題ない
+
+# 文字列かどうか判定
+## サンプルコード
+
+```vb
+Dim input_data as integer: input_data = 3
+
+if vartype(input_data) = vbInteger then
+~
+```
+## 参考
+[VarType 関数 \(Visual Basic for Applications\) \| Microsoft Docs](https://docs.microsoft.com/ja-jp/office/vba/language/reference/user-interface-help/vartype-function)
